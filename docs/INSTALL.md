@@ -57,7 +57,7 @@ from the tray). When one is available it asks:
 
 You can also check at any time from **Settings > Updates** or the tray menu (**Check for updates**),
 and turn automatic checks off there. The check downloads a small public file from
-`github.com/surafeldevelopment/cyberdome-releases` and sends nothing about your assessment.
+`github.com/surafeldevelopment/cyberdome` and sends nothing about your assessment.
 Your data is kept on every update.
 
 ## Uninstalling

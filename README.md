@@ -17,8 +17,8 @@ back to an Evidence ID (`EV-001`, `EV-002`, …).
 
 ## Install (Windows)
 
-Download **`CyberDomeInstaller.exe`** from the
-[latest release](https://github.com/surafeldevelopment/cyberdome-releases/releases/latest) and run it. It installs CyberDome into `C:\Program Files\CyberDome`
+Download **`CyberDomeInstaller.exe`** from this repository's
+[latest release](https://github.com/surafeldevelopment/cyberdome/releases/latest) and run it. It installs CyberDome into `C:\Program Files\CyberDome`
 (Windows asks for permission once), adds Start menu and desktop shortcuts, and registers an uninstaller in
 Settings > Apps. To run scans from the app, also install **Nmap** with Npcap from nmap.org.
 Installed copies offer new versions automatically (Update now, Remind me later, or Skip this

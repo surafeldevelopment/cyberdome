@@ -15,7 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const UPDATE_REPO = process.env.CYBERDOME_UPDATE_REPO || 'surafeldevelopment/cyberdome-releases';
+const UPDATE_REPO = process.env.CYBERDOME_UPDATE_REPO || 'surafeldevelopment/cyberdome';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const OUT = path.join(HERE, 'out');
@@ -69,12 +69,6 @@ try {
 }
 
 if (gh) {
-  try {
-    execFileSync('gh', ['repo', 'view', UPDATE_REPO], { stdio: 'ignore' });
-  } catch {
-    console.log(`> Creating public repository ${UPDATE_REPO} (installers only, no source code)`);
-    execFileSync('gh', ['repo', 'create', UPDATE_REPO, '--public', '--description', 'CyberDome Command Center installers and update feed'], { stdio: 'inherit' });
-  }
   execFileSync('gh', ['release', 'create', tag, exe, feedPath, '--repo', UPDATE_REPO, '--title', `CyberDome ${version}`, '--notes', feed.notes, '--latest'], { stdio: 'inherit' });
   console.log(`\nPublished ${tag}. Installed copies will offer it within a few hours, or right away from "Check for updates".`);
 } else {

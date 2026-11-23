@@ -12,7 +12,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawn } = require('node:child_process');
 
-const DEFAULT_FEED = 'https://github.com/surafeldevelopment/cyberdome-releases/releases/latest/download/latest.json';
+const DEFAULT_FEED = 'https://github.com/surafeldevelopment/cyberdome/releases/latest/download/latest.json';
 const ALLOWED_HOSTS = ['github.com', 'objects.githubusercontent.com', 'release-assets.githubusercontent.com'];
 const CHECK_EVERY_MS = 6 * 60 * 60 * 1000;
 const REMIND_AFTER_MS = 24 * 60 * 60 * 1000;
@@ -137,7 +137,7 @@ function createUpdater(opts) {
         cancelId: 1,
         noLink: true,
       });
-      if (r.response === 0) shell.openExternal(feed.page || 'https://github.com/surafeldevelopment/cyberdome-releases/releases/latest');
+      if (r.response === 0) shell.openExternal(feed.page || 'https://github.com/surafeldevelopment/cyberdome/releases/latest');
     }
   }
 

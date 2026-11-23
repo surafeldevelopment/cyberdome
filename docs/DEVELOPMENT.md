@@ -66,17 +66,17 @@ The version comes from the root `package.json`. The Electron version is pinned i
 
 ## Publishing an update
 
-Installed copies read `https://github.com/surafeldevelopment/cyberdome-releases/releases/latest/download/latest.json`
+Installed copies read `https://github.com/surafeldevelopment/cyberdome/releases/latest/download/latest.json`
 and offer any higher version (Update now, Remind me later, Skip this version). To publish:
 
 ```
-npm run release -- 1.2.0 "Short description of what changed"
+npm run release -- 1.2.2 "Short description of what changed"
 ```
 
 This sets the version in `package.json`, builds `desktop/out/CyberDomeInstaller.exe`, and writes
 `desktop/out/latest.json` with the version, notes, download URL, SHA-256 and size. If the GitHub
-CLI (`gh`) is installed and signed in, it also creates the public `cyberdome-releases` repository
-the first time (installers only, no source code) and publishes the release with both files.
+CLI (`gh`) is installed and signed in, it publishes the release with both files on this
+repository's Releases page.
 Without `gh`, it prints the two files to upload on the GitHub "new release" page.
 
 Rules the updater enforces: the feed and the download must be HTTPS on github.com (or GitHub's

@@ -41,7 +41,7 @@ function feedFor(bytes: Buffer, version = '1.2.0', sha?: string) {
   return {
     version,
     notes: 'Faster scans',
-    installer: { url: `https://github.com/surafeldevelopment/cyberdome-releases/releases/download/v${version}/CyberDomeInstaller.exe`, sha256: sha ?? crypto.createHash('sha256').update(bytes).digest('hex'), size: bytes.length },
+    installer: { url: `https://github.com/surafeldevelopment/cyberdome/releases/download/v${version}/CyberDomeInstaller.exe`, sha256: sha ?? crypto.createHash('sha256').update(bytes).digest('hex'), size: bytes.length },
   };
 }
 
