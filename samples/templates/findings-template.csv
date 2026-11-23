@@ -1,0 +1,2 @@
+title,severity,host_ip,port,protocol,cves,cvss_score,cvss_version,cvss_vector,description,impact,remediation,scanner,plugin_id,evidence_note
+"SYNTHETIC EXAMPLE - Outdated OpenSSH version reported",medium,192.0.2.30,22,tcp,CVE-2021-41617,7.0,3.1,CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H,"Scanner reported OpenSSH 7.6p1 from the service banner.","Possible privilege escalation if the vulnerable configuration is present.","Upgrade OpenSSH to a supported release.",ExampleScanner,EX-1001,"Banner observed in synthetic scan output"

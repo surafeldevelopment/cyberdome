@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<!-- SYNTHETIC TEST FIXTURE: real Nmap output produced by scanning 127.0.0.1 inside the CyberDome development sandbox (temporary local listeners). Not assessment evidence. -->
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Oct 19 09:34:25 2026 as: nmap -sV -p 18022,18080,18099 -oX scan-localhost.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -sV -p 18022,18080,18099 -oX scan-localhost.xml 127.0.0.1" start="1792416865" startstr="Mon Oct 19 09:34:25 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="18022,18080,18099"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1792416865" endtime="1792416871"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="18022"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="18080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="SimpleHTTPServer" version="0.6" extrainfo="Python 3.13.16" method="probed" conf="10"><cpe>cpe:/a:python:simplehttpserver:0.6</cpe></service></port>
+<port protocol="tcp" portid="18099"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="33" rttvar="2827" to="100000"/>
+</host>
+<runstats><finished time="1792416871" timestr="Mon Oct 19 09:34:31 2026" summary="Nmap done at Mon Oct 19 09:34:31 2026; 1 IP address (1 host up) scanned in 6.30 seconds" elapsed="6.30" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

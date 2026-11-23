@@ -1,0 +1,6 @@
+# SYNTHETIC DEMO DATA — fabricated for the CyberDome demo engagement. Not from any real system.
+C:\> schtasks /query /fo LIST /v | findstr /i "TaskName Task.To.Run"
+TaskName:                             \Microsoft\Windows\Defrag\ScheduledDefrag
+Task To Run:                          %windir%\system32\defrag.exe -c -h -o -$
+TaskName:                             \UpdaterCheck
+Task To Run:                          C:\Users\Public\AppData\Local\Temp\upd.exe /silent

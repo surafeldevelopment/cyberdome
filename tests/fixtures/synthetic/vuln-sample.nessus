@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- SYNTHETIC TEST FIXTURE for CyberDome Command Center. Structurally modeled on a Nessus v2 export.
+     Hosts are RFC 5737 documentation addresses. These are NOT real assessment results. -->
+<NessusClientData_v2>
+<Policy><policyName>SYNTHETIC Basic Network Scan</policyName></Policy>
+<Report name="SYNTHETIC CyberDome lab scan" xmlns:cm="http://www.nessus.org/cm">
+<ReportHost name="192.0.2.10">
+<HostProperties>
+<tag name="HOST_END">Mon Oct 12 10:41:07 2026</tag>
+<tag name="host-ip">192.0.2.10</tag>
+<tag name="host-fqdn">web01.cyberdome.example</tag>
+<tag name="operating-system">Linux Kernel 5.4 on Ubuntu 20.04</tag>
+<tag name="HOST_START">Mon Oct 12 10:30:02 2026</tag>
+</HostProperties>
+<ReportItem port="0" svc_name="general" protocol="tcp" severity="0" pluginID="19506" pluginName="Nessus Scan Information" pluginFamily="Settings">
+<description>SYNTHETIC. Information about this scan.</description>
+<risk_factor>None</risk_factor>
+<solution>n/a</solution>
+<synopsis>This plugin displays information about the Nessus scan.</synopsis>
+</ReportItem>
+<ReportItem port="80" svc_name="www" protocol="tcp" severity="2" pluginID="900101" pluginName="Apache HTTP Server Version Reported as Outdated (SYNTHETIC)" pluginFamily="Web Servers">
+<cve>CVE-2021-44790</cve>
+<cve>CVE-2021-41773</cve>
+<cvss3_base_score>6.5</cvss3_base_score>
+<cvss3_vector>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</cvss3_vector>
+<cvss_base_score>5.0</cvss_base_score>
+<cvss_vector>AV:N/AC:L/Au:N/C:P/I:N/A:N</cvss_vector>
+<description>SYNTHETIC. According to its banner, the version of Apache httpd installed on the remote host is 2.4.41, which may be affected by multiple vulnerabilities.</description>
+<plugin_output>URL : http://192.0.2.10/
+Installed version : 2.4.41
+Fixed version : 2.4.52</plugin_output>
+<risk_factor>Medium</risk_factor>
+<solution>Upgrade to Apache version 2.4.52 or later.</solution>
+<synopsis>The remote web server may be affected by multiple vulnerabilities.</synopsis>
+</ReportItem>
+<ReportItem port="443" svc_name="www" protocol="tcp" severity="1" pluginID="900102" pluginName="TLS Version 1.0 Protocol Detection (SYNTHETIC)" pluginFamily="Service detection">
+<cvss3_base_score>3.7</cvss3_base_score>
+<cvss3_vector>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N</cvss3_vector>
+<description>SYNTHETIC. The remote service accepts connections encrypted using TLS 1.0.</description>
+<risk_factor>Low</risk_factor>
+<solution>Enable support for TLS 1.2 and 1.3, and disable support for TLS 1.0.</solution>
+<synopsis>The remote service encrypts traffic using an older version of TLS.</synopsis>
+</ReportItem>
+</ReportHost>
+<ReportHost name="192.0.2.30">
+<HostProperties>
+<tag name="host-ip">192.0.2.30</tag>
+<tag name="host-fqdn">db01.cyberdome.example</tag>
+</HostProperties>
+<ReportItem port="3306" svc_name="mysql" protocol="tcp" severity="3" pluginID="900103" pluginName="MySQL Server Reachable From Untrusted Network (SYNTHETIC)" pluginFamily="Databases">
+<cvss3_base_score>7.5</cvss3_base_score>
+<cvss3_vector>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N</cvss3_vector>
+<description>SYNTHETIC. The MySQL service (5.7.33) accepts connections from the scanning host.</description>
+<risk_factor>High</risk_factor>
+<solution>Restrict access to the database port to application servers only.</solution>
+<synopsis>A database service is exposed to the network.</synopsis>
+</ReportItem>
+</ReportHost>
+<ReportHost name="192.0.2.99">
+<HostProperties><tag name="host-ip">192.0.2.99</tag></HostProperties>
+<ReportItem port="23" svc_name="telnet" protocol="tcp" severity="4" pluginID="900104" pluginName="Unencrypted Telnet Server (SYNTHETIC)" pluginFamily="Misc.">
+<cvss3_base_score>9.8</cvss3_base_score>
+<cvss3_vector>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</cvss3_vector>
+<description>SYNTHETIC. The remote host is running a Telnet server over an unencrypted channel.</description>
+<risk_factor>Critical</risk_factor>
+<solution>Disable the Telnet service and use SSH instead.</solution>
+<synopsis>The remote Telnet server transmits traffic in cleartext.</synopsis>
+</ReportItem>
+</ReportHost>
+</Report>
+</NessusClientData_v2>

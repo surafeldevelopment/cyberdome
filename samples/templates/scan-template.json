@@ -1,0 +1,36 @@
+{
+  "synthetic_note": "SYNTHETIC TEMPLATE EXAMPLE — replace with your authorized scan results.",
+  "tool": "Nmap",
+  "tool_version": "7.94",
+  "command": "nmap -sV -oX scan.xml <INSTRUCTOR-APPROVED-TARGET>",
+  "scanned_at": "2026-10-12T14:05:00Z",
+  "hosts": [
+    {
+      "ip": "192.0.2.10",
+      "hostname": "web01.cyberdome.example",
+      "os": "Linux",
+      "ports": [
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "product": "OpenSSH",
+          "version": "8.2p1",
+          "version_status": "detected",
+          "notes": ""
+        },
+        {
+          "port": 80,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "http",
+          "product": "Apache httpd",
+          "version": "",
+          "version_status": "unknown",
+          "notes": "Version not shown"
+        }
+      ]
+    }
+  ]
+}

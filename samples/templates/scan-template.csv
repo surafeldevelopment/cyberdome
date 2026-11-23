@@ -1,0 +1,4 @@
+host_ip,hostname,port,protocol,state,service,product,version,version_status,os,observed_at,notes
+# SYNTHETIC TEMPLATE EXAMPLE — replace these rows with your authorized scan results. Lines starting with # are ignored.
+192.0.2.10,web01.cyberdome.example,22,tcp,open,ssh,OpenSSH,8.2p1,detected,Linux,2026-10-12T14:07:00Z,Banner read by service probe
+192.0.2.10,web01.cyberdome.example,80,tcp,open,http,Apache httpd,,unknown,Linux,2026-10-12T14:07:00Z,Version not shown in output

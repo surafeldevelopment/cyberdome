@@ -1,0 +1,88 @@
+.dash { display: flex; flex-direction: column; gap: 18px; }
+.dash .page-header { margin-bottom: 0; }
+.dash-stamps { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 0.84rem; color: var(--text-2); margin-top: -6px; }
+.dash-stamps strong { color: var(--text); font-weight: 500; }
+
+.xm-panel .panel-head { padding-bottom: 6px; }
+.xm { position: relative; }
+.xm .matrix-wrap { padding-top: 6px; }
+.xm-host { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.25; color: var(--text); text-decoration: none; }
+.xm-host:hover { text-decoration: none; }
+.xm-host:hover .mono { color: var(--accent-strong); }
+.xm .cell { transition: transform 0.08s ease; }
+.xm button.cell:hover, .xm button.cell:focus-visible { transform: scale(1.1); }
+.xm-tip {
+  position: absolute; z-index: 20; transform: translateX(-50%); min-width: 220px; max-width: 300px;
+  background: var(--panel-3); border: 1px solid var(--line-strong); border-radius: var(--r-md);
+  padding: 9px 11px; box-shadow: var(--shadow-pop); font-size: 0.84rem; pointer-events: none;
+}
+.xm-legend { padding: 0 20px 18px; margin-top: 0; }
+.xm-legend > span { display: inline-flex; align-items: center; gap: 7px; }
+.legend-cell { width: 18px !important; height: 18px !important; font-size: 0.58rem !important; border-radius: 5px !important; display: inline-grid !important; cursor: default !important; }
+
+.ot-panel .panel-head .actions { flex-wrap: wrap; }
+.lab-row { display: flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none; }
+.lab-row:hover { text-decoration: none; color: var(--accent-strong); }
+.lab-ic.signed_off, .lab-ic.requirements_met { color: var(--ok); }
+.lab-ic.in_progress { color: var(--accent-strong); }
+.lab-ic.not_started { color: var(--text-3); }
+.miss-row { display: flex; gap: 8px; align-items: flex-start; }
+.cp-list li { display: flex; flex-direction: column; gap: 2px; }
+.cp-date { font-size: 0.78rem; color: var(--accent-strong); display: inline-flex; gap: 6px; align-items: center; }
+.cp-passed { opacity: 0.55; }
+.cp-passed .cp-date { color: var(--text-3); }
+.dash .list-plain .cell-asset .ic { width: 34px; height: 34px; }
+@media (max-width: 1280px) { .dash-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+@media (max-width: 860px) { .dash-bottom { grid-template-columns: minmax(0, 1fr) !important; } .ring-wrap { grid-template-columns: 1fr; } }
+.dash > .grid.span-side { grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); }
+@media (max-width: 1280px) { .dash > .grid.span-side { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Calm dashboard: a few essentials, details on demand ---------- */
+.dash.calm { gap: 20px; }
+.dash-meta { margin: -10px 0 0; font-size: 0.86rem; color: var(--text-3); }
+.stat-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.stat {
+  position: relative; display: flex; flex-direction: column; gap: 2px; padding: 16px 18px; cursor: pointer;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--hl);
+}
+.stat:hover { border-color: var(--line-strong); }
+.stat:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.stat-label { font-size: 0.84rem; color: var(--text-2); }
+.stat-value { font-size: 1.85rem; line-height: 1.2; font-variant-numeric: tabular-nums; color: var(--text); }
+.stat-sub { font-size: 0.8rem; color: var(--text-3); }
+.stat-sub.warn { color: var(--warn); }
+.stat-how { position: absolute; top: 8px; right: 8px; }
+.dash > .grid.dash-main { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.calm-empty { margin: 0; color: var(--text-3); font-size: 0.9rem; }
+.calm-empty.ok { color: var(--ok); }
+.calm-empty.pad { padding: 4px 20px 20px; }
+.next-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.next-list li { display: flex; gap: 12px; align-items: baseline; padding: 9px 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+.next-list li:first-child { border-top: 0; padding-top: 2px; }
+.next-list a { color: var(--text); }
+.next-list a:hover { color: var(--accent-strong); }
+.next-lab { flex: none; width: 46px; font-size: 0.76rem; color: var(--text-3); font-family: var(--font-mono); }
+.sev-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.sev-bars a { display: grid; grid-template-columns: 70px minmax(0, 1fr) 28px; gap: 12px; align-items: center; color: var(--text-2); font-size: 0.88rem; text-decoration: none; }
+.sev-bars a:hover { color: var(--text); }
+.sev-track { height: 8px; border-radius: 999px; background: var(--panel-3); overflow: hidden; }
+.sev-track > span { display: block; height: 100%; border-radius: 999px; min-width: 0; }
+.sev-n { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); }
+.calm-table td, .calm-table th { padding-top: 11px; padding-bottom: 11px; }
+.calm-table .num { text-align: right; width: 90px; font-variant-numeric: tabular-nums; }
+.hi-flag { color: var(--sev-high); font-size: 0.8rem; }
+.risk-list { margin: 0; padding: 0 0 0 20px; display: grid; gap: 10px; color: var(--text-3); }
+.risk-list a { display: flex; flex-direction: column; gap: 1px; color: var(--text); text-decoration: none; }
+.risk-list a:hover strong { color: var(--accent-strong); }
+.risk-list strong { font-weight: 500; font-size: 0.92rem; }
+.dash-more { border-top: 1px solid var(--line); padding-top: 14px; }
+.dash-more > summary { cursor: pointer; color: var(--text-2); font-size: 0.9rem; list-style: none; display: inline-flex; align-items: center; gap: 8px; padding: 6px 2px; }
+.dash-more > summary::-webkit-details-marker { display: none; }
+.dash-more > summary::before { content: '›'; display: inline-block; transition: transform .15s ease; font-size: 1.1rem; line-height: 1; }
+.dash-more[open] > summary::before { transform: rotate(90deg); }
+.dash-more > summary:hover { color: var(--text); }
+.dash-more-body { display: flex; flex-direction: column; gap: 18px; margin-top: 14px; }
+@media (max-width: 1100px) {
+  .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dash > .grid.dash-main { grid-template-columns: minmax(0, 1fr); }
+}

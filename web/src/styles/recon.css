@@ -1,0 +1,21 @@
+/* Recon module — reference card language */
+.recon-donut { justify-content: flex-start; gap: 34px; }
+.recon-donut > svg { flex: 0 0 auto; max-width: 200px; }
+.recon-obs .cell-asset .t { max-width: 26ch; }
+.recon-obs table.data td.wrap-ok { white-space: normal; min-width: 13ch; }
+.recon-obs table.data td, .recon-obs table.data th { padding-left: 12px; padding-right: 12px; }
+.recon-obs table.data td:first-child, .recon-obs table.data th:first-child { padding-left: 20px; }
+.recon-obs table.data td { white-space: nowrap; }
+.recon-obs table.data td .chips { flex-wrap: nowrap; }
+.cell-2 { line-height: 1.35; }
+.issue-list { display: flex; flex-direction: column; gap: 6px; }
+.issue-list details { background: var(--bg-sunken); border: 1px solid var(--line); border-radius: var(--r-md); padding: 8px 12px; }
+.issue-list summary { cursor: pointer; }
+.issue-list ul { margin: 6px 0 0; padding-left: 18px; color: var(--text-2); max-height: 200px; overflow-y: auto; }
+@media (max-width: 560px) {
+  .recon-donut { gap: 18px; }
+  .recon-donut > svg { max-width: 170px; margin: 0 auto; }
+}
+
+/* Compact dot pills inside tables */
+.recon-obs table.data .pill { padding: 4px 11px; font-size: 0.8rem; gap: 7px; }

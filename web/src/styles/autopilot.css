@@ -1,0 +1,55 @@
+.autopilot { display: flex; flex-direction: column; gap: 18px; }
+.autopilot .page-header { margin-bottom: 0; }
+.ap-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 18px; align-items: start; }
+.ap-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ap-checks li { display: flex; align-items: center; gap: 10px; font-size: 0.92rem; flex-wrap: wrap; }
+.ap-checks svg { width: 17px; height: 17px; flex: none; }
+.ap-checks li.ok svg { color: var(--ok); }
+.ap-checks li.bad svg { color: var(--bad); }
+.ap-checks li.warn svg { color: var(--warn); }
+.ap-fix { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; font-size: 0.86rem; }
+.ap-options { display: grid; gap: 12px; }
+.ap-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ap-seg button { all: unset; cursor: pointer; display: grid; gap: 3px; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2); }
+.ap-seg button strong { font-weight: 500; font-size: 0.92rem; }
+.ap-seg button span { font-size: 0.8rem; color: var(--text-3); }
+.ap-seg button.on { border-color: var(--accent); background: var(--accent-wash); }
+.ap-seg button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ap-go { min-width: 170px; justify-content: center; }
+.ap-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
+.ap-summary > div { display: grid; gap: 2px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2); }
+.ap-summary span { font-size: 0.78rem; color: var(--text-3); }
+.ap-summary strong { font-size: 1.4rem; font-weight: 400; font-variant-numeric: tabular-nums; }
+.ap-summary strong.warn { color: var(--warn); }
+.ap-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.ap-steps > li { display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.ap-steps > li:first-child { border-top: 0; padding-top: 2px; }
+.ap-steps > li > svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--text-3); }
+.ap-steps > li.st-done > svg { color: var(--ok); }
+.ap-steps > li.st-running > svg { color: var(--accent-strong); }
+.ap-steps > li.st-failed > svg { color: var(--bad); }
+.ap-steps > li.st-blocked > svg { color: var(--warn); }
+.ap-steps > li.st-skipped { opacity: 0.6; }
+.ap-step-body { min-width: 0; flex: 1; display: grid; gap: 6px; }
+.ap-step-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.ap-step-head strong { font-weight: 500; }
+.ap-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 0.86rem; color: var(--text-2); }
+.ap-lines li { overflow-wrap: anywhere; }
+.ap-lines li.ok a, .ap-lines li.ok { color: var(--text); }
+.ap-lines li.warn, .ap-lines li.warn a { color: var(--warn); }
+.ap-lines li.bad, .ap-lines li.bad a { color: var(--bad); }
+.spin { animation: ap-spin 1s linear infinite; }
+@keyframes ap-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+.ap-rules, .ap-history { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.9rem; }
+.ap-history li { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.sev-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: var(--text-3); }
+.sev-dot.sev-critical { background: var(--sev-critical, #e5484d); }
+.sev-dot.sev-high { background: var(--sev-high, #f08a3e); }
+.sev-dot.sev-medium { background: var(--sev-medium, #e8b84a); }
+.sev-dot.sev-low { background: var(--sev-low, #5b8fd0); }
+.linklike { all: unset; cursor: pointer; color: var(--accent-strong); }
+.linklike:hover { text-decoration: underline; }
+.linklike:focus-visible { outline: 2px solid var(--focus); }
+@media (max-width: 1100px) { .ap-grid { grid-template-columns: minmax(0, 1fr); } .ap-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ap-more > summary { cursor: pointer; color: var(--text-muted, #9aa59f); font-size: 13px; }

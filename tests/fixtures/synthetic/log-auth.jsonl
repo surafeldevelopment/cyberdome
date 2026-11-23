@@ -1,0 +1,4 @@
+{"time":"2026-10-08 10:12:04","src_ip":"198.51.100.77","dst_ip":"192.0.2.10","dport":22,"type":"auth_failure","msg":"SYNTHETIC TEST: Failed password for admin","user":"admin","severity":"warning"}
+{"time":"2026-10-08 10:14:40","src_ip":"198.51.100.77","dst_ip":"192.0.2.10","dport":22,"type":"auth_success","msg":"SYNTHETIC TEST: Accepted password for deploy","user":"deploy","weird_field":"x"}
+not json at all
+{"time":"Oct 8 10:20:00","src_ip":"192.0.2.10","dst_ip":"203.0.113.25","type":"outbound_connection","msg":"SYNTHETIC TEST: syslog-style time without year"}

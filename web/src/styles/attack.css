@@ -1,0 +1,83 @@
+/* Attack Evidence module — reference card language */
+.req-meter { display: flex; align-items: center; gap: 12px; flex-wrap: nowrap; }
+.req-meter > .progress { min-width: 0; }
+.req-meter > span { flex: none; }
+.met-icon { color: var(--ok); vertical-align: -2px; }
+table.data tr.flagged-row td { background: rgba(61, 204, 126, 0.035); }
+.btn.flag-on { background: var(--accent-wash); border-color: var(--accent); color: var(--accent-strong); }
+.mono-msg { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-2); }
+.pcap-row { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; }
+
+/* Tables: keep rows on one line; long text clips with ellipsis */
+.ev-table-wrap table.data td, .ind-panel table.data td, .imp-panel table.data td, .map-panel table.data td { white-space: nowrap; }
+.ind-panel table.data td .wrap-cell { white-space: normal; min-width: 20ch; display: -webkit-box; }
+.ind-panel .cell-asset .t { max-width: 30ch; }
+.imp-panel .cell-asset .t { max-width: 34ch; }
+.ind-panel table.data td, .ind-panel table.data th { padding-left: 12px; padding-right: 12px; }
+.ind-panel table.data td:first-child, .ind-panel table.data th:first-child { padding-left: 20px; }
+.map-panel .cell-asset .t { max-width: 40ch; }
+.map-panel table.data td:nth-child(3) { white-space: normal; min-width: 26ch; }
+table.data td .cell-asset .t span.mono { font-size: 0.74rem; }
+table.data td .chips { flex-wrap: nowrap; }
+.ev-time { line-height: 1.35; }
+table.data td.ev-act { text-align: right; }
+
+/* Events table first column */
+.ev-table-wrap table.data td:first-child .cell-asset .t { max-width: 30ch; }
+.ev-table-wrap table.data td, .ev-table-wrap table.data th { padding-left: 12px; padding-right: 12px; }
+.ev-table-wrap table.data td:first-child, .ev-table-wrap table.data th:first-child { padding-left: 20px; }
+
+/* Chart panel */
+.ev-chart .panel-head .actions { flex-wrap: wrap; }
+
+/* Timeline cards */
+.timeline { padding-left: 30px; }
+.timeline .tl-item { margin-bottom: 14px; }
+.timeline .tl-item::before { top: 22px; left: -25px; }
+.timeline.unplaced::before { background: repeating-linear-gradient(to bottom, var(--line-hover) 0 6px, transparent 6px 12px); }
+.tl-card { background: var(--panel-2); border: 1px solid var(--line-strong); border-radius: var(--r-lg); box-shadow: var(--hl); }
+.tl-item:hover .tl-card { border-color: var(--line-hover); }
+.tl-item.uncertain .tl-card { border-style: dashed; border-color: rgba(241, 185, 70, 0.5); }
+.tl-item.unknown-time .tl-card { border-style: dashed; border-color: var(--line-hover); }
+.tl-head { display: flex; align-items: center; gap: 10px; padding: 12px 14px 6px 8px; flex-wrap: wrap; }
+.tl-time { display: flex; flex-direction: column; line-height: 1.35; }
+.tl-code { color: #9cebbf; background: var(--accent-deep); border: 1px solid var(--accent-line); border-radius: 999px; padding: 1px 9px; font-size: 0.76rem; }
+.tl-body { padding: 4px 18px 16px 50px; display: flex; flex-direction: column; gap: 8px; }
+.tl-body p { margin: 0; font-size: 0.93rem; }
+.tl-label { display: block; font-size: 0.74rem; color: var(--text-3); margin-bottom: 1px; }
+.tl-interp { border: 1px solid var(--line); background: var(--bg-sunken); border-radius: var(--r-sm); padding: 8px 12px; }
+.tl-more { border-top: 1px solid var(--line); padding: 12px 18px 14px 50px; }
+.tl-key { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--accent-strong); }
+.tl-key.dashed { border-style: dashed; border-color: var(--warn); }
+.tl-key.hollow { border-color: var(--text-3); background: var(--bg); }
+.norm-doc { padding: 14px 20px; }
+.norm-doc summary { cursor: pointer; font-weight: 500; }
+.norm-doc ul { margin: 8px 0 0; padding-left: 18px; }
+
+@media (max-width: 860px) {
+  .tl-body, .tl-more { padding-left: 16px; }
+  .timeline { padding-left: 24px; }
+  .timeline .tl-item::before { left: -19px; }
+  .pcap-row { flex-direction: column; }
+}
+
+/* Compact dot pills inside tables */
+.ev-table-wrap table.data .pill, .ind-panel table.data .pill, .imp-panel table.data .pill, .map-panel table.data .pill { padding: 4px 11px; font-size: 0.8rem; gap: 7px; }
+
+/* Indicator table: stack evidence chips; tighten further when the panel sits in a narrow column */
+.ind-panel { container-type: inline-size; }
+.ind-panel table.data td .chips { flex-wrap: wrap; max-width: 120px; }
+.ind-panel .cell-asset .t { max-width: 26ch; }
+@container (max-width: 900px) {
+  .ind-panel .cell-asset .t { max-width: 18ch; }
+  .ind-panel table.data td .wrap-cell { min-width: 14ch; max-width: 18ch !important; }
+  .ind-panel table.data td, .ind-panel table.data th { padding-left: 8px; padding-right: 8px; }
+  .ind-panel table.data td:first-child, .ind-panel table.data th:first-child { padding-left: 16px; }
+  .ind-panel .cell-asset .ic { width: 32px; height: 32px; }
+}
+
+.obs-why { display: flex !important; flex-direction: column; gap: 3px; white-space: normal; }
+.clamp-1 { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@container (max-width: 900px) {
+  .ind-panel .obs-why { max-width: 24ch !important; }
+}

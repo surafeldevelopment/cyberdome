@@ -1,0 +1,10 @@
+{
+  "note": "SYNTHETIC DEMO DATA. Prefer creating timeline events from imported demo log rows (POST /timeline/from-log-event/:id); these manual examples show uncertainty labels.",
+  "events": [
+    { "original_timestamp": "2026-10-08T10:03:00-04:00", "source_host": "198.51.100.77", "dest_host": "192.0.2.10", "event_type": "connection_attempt", "observation": "SYNTHETIC: SYN packets to ports 21, 22, 23, 80, 443, 3306 within one second.", "student_interpretation": "Possible reconnaissance/port scanning.", "confidence": "medium", "verification_status": "fact" },
+    { "original_timestamp": "2026-10-08T10:12:04-04:00", "source_host": "198.51.100.77", "dest_host": "192.0.2.10:22", "event_type": "auth_failure", "observation": "SYNTHETIC: first of four failed SSH logins.", "student_interpretation": "Possible password guessing; verify context.", "confidence": "medium", "verification_status": "fact" },
+    { "original_timestamp": "2026-10-08T10:14:40-04:00", "source_host": "198.51.100.77", "dest_host": "192.0.2.10:22", "event_type": "auth_success", "observation": "SYNTHETIC: successful SSH login for 'deploy'.", "student_interpretation": "Possible account compromise following guessing.", "confidence": "low", "verification_status": "assumption" },
+    { "original_timestamp": "2026-10-08T10:25:31-04:00", "source_host": "192.0.2.10", "dest_host": "203.0.113.25:4444", "event_type": "outbound_connection", "observation": "SYNTHETIC: unexpected outbound connection from web01.", "student_interpretation": "Requires process/log correlation.", "confidence": "low", "verification_status": "requires_more_evidence" },
+    { "original_timestamp": null, "sequence_hint": 5, "order_certainty": "uncertain", "time_certainty": "unknown", "source_host": "192.0.2.10", "dest_host": "192.0.2.20:445", "event_type": "smb_session", "observation": "SYNTHETIC: SMB session web01 → files01; source row had no timestamp.", "student_interpretation": "May indicate lateral movement; order relative to other events is not established.", "confidence": "low", "verification_status": "requires_more_evidence" }
+  ]
+}

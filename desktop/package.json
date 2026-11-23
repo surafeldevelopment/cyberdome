@@ -1,0 +1,14 @@
+{
+  "name": "cyberdome-desktop-build",
+  "private": true,
+  "description": "Build tooling for the CyberDome Windows desktop app and installer. Not needed to run CyberDome in a browser.",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "@electron/asar": "4.3.1",
+    "@electron/get": "5.1.0",
+    "resedit": "3.1.0"
+  },
+  "electronVersion": "44.10.0"
+}

@@ -1,0 +1,13 @@
+# SYNTHETIC DEMO DATA — fabricated for the CyberDome demo engagement. Not from any real system.
+C:\> net localgroup administrators
+Alias name     administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator
+CYBERDOME\Domain Admins
+labadmin
+svc_backup2
+The command completed successfully.

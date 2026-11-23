@@ -1,0 +1,46 @@
+/* Scan & Enumeration module */
+.lab3-reqs { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--bg-sunken); font-size: 0.88rem; color: var(--text-2); }
+.lab3-req { display: inline-flex; align-items: center; gap: 7px; }
+.lab3-req svg { width: 16px; height: 16px; color: var(--text-3); }
+.lab3-req.met svg { color: var(--ok); }
+.lab3-req.met { color: var(--text); }
+.obs-group { border: 1px solid var(--line); border-radius: var(--r-md); padding: 6px 10px; background: var(--bg-sunken); }
+.obs-group > summary { cursor: pointer; padding: 3px 0; }
+.obs-group[open] > summary { margin-bottom: 4px; }
+/* Scoped responsive tweaks for panel headers in this module (shared .panel-head does not wrap). */
+.scan-module .panel-head { flex-wrap: wrap; row-gap: 8px; }
+@media (max-width: 860px) {
+  .scan-module .panel-head .hint { display: none; }
+  .scan-module .panel-head .actions { margin-left: 0; flex-wrap: wrap; }
+  .scan-module .filters input[type='search'] { max-width: none; }
+}
+
+/* Reference-style restyle */
+.filters .filter-search { flex: 0 1 300px; max-width: 300px; }
+.filters .filter-search input[type='search'] { max-width: none; padding-right: 14px; }
+.scan-os { display: flex; flex-direction: column; gap: 2px; align-items: flex-start; min-width: 0; max-width: 220px; }
+.scan-os .clip { max-width: 220px; display: block; }
+.scan-ver { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.scan-ver .clip { max-width: 24ch; display: block; }
+.scan-purpose { max-width: 30ch; }
+.scan-module table.data td { white-space: normal; }
+.scan-module .cell-asset .t strong.mono { font-size: 0.86rem; }
+.scan-module .cell-asset .t { max-width: 260px; }
+.lab3-reqs { background: var(--panel); border-radius: var(--r-lg); padding: 14px 18px; }
+.scan-facts { margin-bottom: 18px; }
+.obs-group { border-radius: var(--r-md); padding: 10px 14px; background: var(--bg-sunken); }
+@media (max-width: 860px) {
+  .filters .filter-search { flex: 1 1 100%; max-width: none; }
+}
+.scan-module .cell-asset .t strong span { display: inline; font-size: inherit; color: inherit; }
+.scan-module .cell-asset .t span span { display: inline; }
+.scan-module table.data th, .scan-module table.data td { padding-left: 12px; padding-right: 12px; }
+.scan-module table.data th:first-child, .scan-module table.data td:first-child { padding-left: 22px; }
+.scan-module .scan-os, .scan-module .scan-os .clip { max-width: 190px; }
+.scan-port { display: flex; flex-direction: column; gap: 2px; white-space: nowrap; }
+.scan-module .cell-asset .t { max-width: 220px; }
+.scan-purpose { max-width: 24ch; }
+.scan-module .grid.span-main > .stack:last-child .kv { grid-template-columns: 104px minmax(0, 1fr); }
+.scan-module .grid.span-main > .stack:first-child .scan-purpose { max-width: 18ch; }
+.scan-when { display: flex; flex-direction: column; white-space: nowrap; }
+@media (max-width: 560px) { .scan-module .cell-asset .t { max-width: 160px; } }

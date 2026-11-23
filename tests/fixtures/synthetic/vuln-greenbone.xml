@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC TEST FIXTURE for CyberDome Command Center. Structurally modeled on a Greenbone/OpenVAS (GMP 22.4) XML report.
+     Hosts are RFC 5737 documentation addresses. These are NOT real assessment results. -->
+<get_reports_response status="200" status_text="OK">
+<report id="00000000-0000-4000-8000-000000000001" format_id="a994b278-1f62-11e1-96ac-406186ea4fc5" extension="xml" content_type="text/xml">
+<owner><name>synthetic</name></owner>
+<name>2026-10-12T14:00:00Z</name>
+<report id="00000000-0000-4000-8000-000000000001">
+<gmp><version>22.4</version></gmp>
+<scan_run_status>Done</scan_run_status>
+<scan_start>2026-10-12T14:00:00Z</scan_start>
+<results start="1" max="100">
+<result id="00000000-0000-4000-8000-0000000000a1">
+<name>OpenSSH Outdated Version Detected (SYNTHETIC)</name>
+<owner><name>synthetic</name></owner>
+<host>192.0.2.30<asset asset_id="00000000-0000-4000-8000-0000000000b1"/><hostname>db01.cyberdome.example</hostname></host>
+<port>22/tcp</port>
+<nvt oid="1.3.6.1.4.1.25623.1.0.999001">
+<type>nvt</type>
+<name>OpenSSH Outdated Version Detected (SYNTHETIC)</name>
+<family>General</family>
+<cvss_base>7.0</cvss_base>
+<severities score="7.0"><severity type="cvss_base_v3"><origin/><date>2026-01-01T00:00:00Z</date><score>7.0</score><value>CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H</value></severity></severities>
+<tags>cvss_base_vector=AV:L/AC:H/Au:N/C:C/I:C/A:C|summary=SYNTHETIC. The remote host is running an OpenSSH version reported as 7.6p1.|insight=Older OpenSSH releases contain known weaknesses.|affected=OpenSSH before 8.8|impact=A local attacker may escalate privileges under specific configurations.|solution=Update OpenSSH to 8.8 or later.|vuldetect=Checks the version from the service banner.|solution_type=VendorFix</tags>
+<solution type="VendorFix">Update OpenSSH to 8.8 or later.</solution>
+<refs><ref type="cve" id="CVE-2021-41617"/><ref type="url" id="https://www.openssh.com/security.html"/></refs>
+</nvt>
+<scan_nvt_version>2026-01-01T00:00:00Z</scan_nvt_version>
+<threat>High</threat>
+<severity>7.0</severity>
+<qod><value>30</value><type>remote_banner_unreliable</type></qod>
+<description>Installed version: 7.6p1
+Fixed version:     8.8
+Installation path / port: 22/tcp</description>
+</result>
+<result id="00000000-0000-4000-8000-0000000000a2">
+<name>FTP Unencrypted Cleartext Login (SYNTHETIC)</name>
+<host>192.0.2.40<asset asset_id="00000000-0000-4000-8000-0000000000b2"/><hostname>ftp01.cyberdome.example</hostname></host>
+<port>21/tcp</port>
+<nvt oid="1.3.6.1.4.1.25623.1.0.999002">
+<type>nvt</type>
+<name>FTP Unencrypted Cleartext Login (SYNTHETIC)</name>
+<family>General</family>
+<cvss_base>4.8</cvss_base>
+<tags>cvss_base_vector=AV:A/AC:L/Au:N/C:P/I:P/A:N|summary=SYNTHETIC. The remote host is running an FTP service that allows cleartext logins over unencrypted connections.|impact=An attacker can uncover login names and passwords by sniffing traffic to the FTP service.|solution=Enable FTPS or enforce the connection via the 'AUTH TLS' command.|solution_type=Mitigation</tags>
+<solution type="Mitigation">Enable FTPS or enforce the connection via the 'AUTH TLS' command.</solution>
+<refs/>
+</nvt>
+<threat>Medium</threat>
+<severity>4.8</severity>
+<qod><value>70</value><type>remote_analysis</type></qod>
+<description>The remote FTP service accepts logins without a previous sent 'AUTH TLS' command.</description>
+</result>
+<result id="00000000-0000-4000-8000-0000000000a3">
+<name>OS Detection Consolidation and Reporting (SYNTHETIC)</name>
+<host>192.0.2.40</host>
+<port>general/tcp</port>
+<nvt oid="1.3.6.1.4.1.25623.1.0.999003"><type>nvt</type><name>OS Detection Consolidation and Reporting (SYNTHETIC)</name><cvss_base>0.0</cvss_base><tags>summary=SYNTHETIC. OS detection summary.</tags><refs/></nvt>
+<threat>Log</threat>
+<severity>0.0</severity>
+<description>Best matching OS: Debian GNU/Linux 11</description>
+</result>
+</results>
+</report>
+</report>
+</get_reports_response>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<!-- SYNTHETIC DEMO DATA: hand-written in genuine Nmap XML structure for the CyberDome demo engagement. Hosts use RFC 5737 documentation addresses (192.0.2.0/24). This is NOT real scan output and NOT assessment evidence. Older scan (before the demo scan) including a down host. -->
+<!-- Nmap 7.94SVN scan initiated Sat Oct 10 09:00:00 2026 as: nmap -sV -oX older.xml 192.0.2.10 192.0.2.60 -->
+<nmaprun scanner="nmap" args="nmap -sV -oX older.xml 192.0.2.10 192.0.2.60" start="1791622800" startstr="Sat Oct 10 09:00:00 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1-1000"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1791622800" endtime="1791622810"><status state="down" reason="no-response" reason_ttl="63"/>
+<address addr="192.0.2.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<host starttime="1791622800" endtime="1791622850"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.0.2.10" addrtype="ipv4"/>
+<hostnames>
+<hostname name="web01.cyberdome.example" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="999"><extrareasons reason="no-response" count="999" proto="tcp" ports=""/></extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"/></port>
+</ports>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<runstats><finished time="1791622860" timestr="Sat Oct 10 09:01:00 2026" summary="Nmap done at Sat Oct 10 09:01:00 2026; 2 IP addresses (1 hosts up) scanned in 60.00 seconds" elapsed="60.00" exit="success"/><hosts up="1" down="1" total="2"/>
+</runstats>
+</nmaprun>

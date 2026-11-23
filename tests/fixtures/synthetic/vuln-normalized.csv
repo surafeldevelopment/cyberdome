@@ -1,0 +1,6 @@
+title,severity,host_ip,port,protocol,cves,cvss_score,cvss_version,cvss_vector,description,impact,remediation,scanner,plugin_id,evidence_note,ticket_ref
+"SYNTHETIC - SMB signing not required",medium,192.0.2.20,445,tcp,,5.3,3.1,CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N,"SYNTHETIC. SMB server does not require message signing.","Allows relay attacks in some configurations.","Require SMB signing via Group Policy.",InstructorSheet,IS-01,"Row from synthetic instructor sheet",T-1
+"SYNTHETIC - RDP exposed to lab network",high,192.0.2.20,3389,tcp,,,,,"SYNTHETIC. RDP reachable from the assessment subnet.","Brute-force exposure.","Restrict RDP to a jump host; enable NLA.",InstructorSheet,IS-02,,T-2
+"SYNTHETIC - row with bad severity",severe,192.0.2.20,,,,,,,,,,InstructorSheet,IS-03,,
+"",high,192.0.2.20,,,,,,,,,,InstructorSheet,IS-04,,
+"SYNTHETIC - malformed CVE and port",low,192.0.2.10,99999,tcp,"CVE-2021-XYZ,CVE-2020-1234",11,,,"SYNTHETIC.","","",InstructorSheet,IS-05,,

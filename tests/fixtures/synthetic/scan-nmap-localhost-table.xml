@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<!-- SYNTHETIC TEST FIXTURE: real Nmap output produced by scanning 127.0.0.1 inside the CyberDome development sandbox (temporary local listeners). Not assessment evidence. -->
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Oct 19 09:34:46 2026 as: nmap -p 18081,18099 -oX scan-localhost-table.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -p 18081,18099 -oX scan-localhost-table.xml 127.0.0.1" start="1792416886" startstr="Mon Oct 19 09:34:46 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="18081,18099"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1792416886" endtime="1792416886"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="18081"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="18099"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="44" rttvar="3761" to="100000"/>
+</host>
+<runstats><finished time="1792416886" timestr="Mon Oct 19 09:34:46 2026" summary="Nmap done at Mon Oct 19 09:34:46 2026; 1 IP address (1 host up) scanned in 0.08 seconds" elapsed="0.08" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

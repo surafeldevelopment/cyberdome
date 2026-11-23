@@ -1,0 +1,14 @@
+# SYNTHETIC DEMO DATA — fabricated for the CyberDome demo engagement. Not from any real system.
+C:\> wevtutil qe Security /q:"*[System[(EventID=1102)]]" /f:text /c:1
+Event[0]:
+  Log Name: Security
+  Source: Microsoft-Windows-Eventlog
+  Date: 2026-10-07T23:41:18.000
+  Event ID: 1102
+  Task: Log clear
+  Level: Information
+  User: N/A
+  Description:
+  The audit log was cleared.
+  Subject:
+        Account Name:   labadmin

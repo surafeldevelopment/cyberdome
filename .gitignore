@@ -1,0 +1,12 @@
+node_modules/
+dist/
+data/
+backups/
+.env
+*.log
+data.before-restore-*/
+desktop/node_modules/
+desktop/out/
+dist-preview/
+release/
+dev-launcher.log

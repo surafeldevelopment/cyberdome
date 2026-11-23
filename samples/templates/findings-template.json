@@ -1,0 +1,22 @@
+{
+  "_comment": "CyberDome normalized findings template. The example row is SYNTHETIC; replace it with instructor-provided or authorized lab findings.",
+  "findings": [
+    {
+      "title": "SYNTHETIC EXAMPLE - Outdated OpenSSH version reported",
+      "severity": "medium",
+      "host_ip": "192.0.2.30",
+      "port": 22,
+      "protocol": "tcp",
+      "cves": ["CVE-2021-41617"],
+      "cvss_score": 7.0,
+      "cvss_version": "3.1",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "description": "Scanner reported OpenSSH 7.6p1 from the service banner.",
+      "impact": "Possible privilege escalation if the vulnerable configuration is present.",
+      "remediation": "Upgrade OpenSSH to a supported release.",
+      "scanner": "ExampleScanner",
+      "plugin_id": "EX-1001",
+      "evidence_note": "Banner observed in synthetic scan output"
+    }
+  ]
+}

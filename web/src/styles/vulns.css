@@ -1,0 +1,71 @@
+/* Vulnerabilities module (Lab 4) */
+.vulns-charts { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.kpi-wrap { display: flex; min-width: 0; }
+.kpi-wrap > .metric { flex: 1; }
+.kpi-wrap.on > .metric { border-color: var(--accent-line); box-shadow: var(--hl), inset 0 0 0 1px var(--accent-line); }
+.vf-cell { display: block; max-width: 250px; min-width: 190px; }
+.ev-cell { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.vf-cell .cell-asset .t strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vulns-table table.data td { white-space: nowrap; }
+.vulns-table .pill { padding: 5px 12px; font-size: 0.82rem; gap: 7px; }
+.vulns-table .pill::before { width: 8px; height: 8px; }
+.vulns-table table.data th, .vulns-table table.data td { padding-left: 10px; padding-right: 10px; }
+.vulns-table table.data th:first-child, .vulns-table table.data td:first-child { padding-left: 20px; }
+.vulns-table .chips { flex-wrap: nowrap; }
+.stack > .kpi-row { margin-bottom: 0; }
+tr.fp-row td { opacity: 0.6; }
+.finding-code { color: var(--accent-strong); font-size: 0.8em; margin-right: 4px; }
+
+.prio-list { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.prio-slot { display: flex; flex-direction: column; gap: 10px; }
+.prio-head .t strong { font-size: 0.98rem; }
+.prio-body { padding: 4px 16px 0 68px; }
+.factor-finding { min-width: 260px; }
+.factor-select { width: 132px !important; min-width: 0; font-size: 0.82rem !important; padding-top: 4px !important; padding-bottom: 4px !important; min-height: 30px !important; }
+
+.issue-list { margin: 4px 0 0; padding-left: 18px; color: var(--text-2); }
+.issue-list li { margin: 2px 0; }
+.issue-list .err-line { color: #ff9aac; }
+
+.unsaved-bar { position: sticky; top: 78px; z-index: 20; display: flex; align-items: center; gap: 10px; justify-content: flex-end; padding: 8px 12px; margin: -8px 0 14px; background: var(--panel-2); border: 1px solid var(--accent); border-radius: 999px; font-size: 0.88rem; }
+.unsaved-bar span { margin-right: auto; color: var(--accent-strong); font-weight: 600; }
+
+.factor-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 14px; margin-bottom: 12px; }
+.big-num { font-size: 1.4rem; font-weight: 600; }
+
+.pick-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.pick { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--bg-sunken); cursor: pointer; font-size: 0.86rem; }
+.pick.on { border-color: var(--accent); background: var(--accent-wash); }
+.pick-scroll { max-height: 260px; overflow-y: auto; border: 1px solid var(--line); border-radius: var(--r-md); }
+.pick.row-pick { display: grid; grid-template-columns: 18px 70px 72px minmax(70px, auto) 1fr auto; width: 100%; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
+.pick.row-pick.on { background: var(--accent-wash); }
+
+.cve-ref { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.cve-ref:last-child { border-bottom: 0; }
+.metric-list li { padding: 4px 0; }
+.metric-list .vec { overflow-wrap: anywhere; }
+.clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.warn-text { color: #f6d77a; }
+
+.task-row { display: grid; grid-template-columns: 120px 1fr auto; gap: 8px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.task-row select { font-size: 0.82rem; min-height: 32px; padding: 4px 28px 4px 12px; }
+.done-text { text-decoration: line-through; color: var(--text-3); }
+.task-add { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 6px; margin-top: 6px; }
+.task-add > :first-child { grid-column: 1 / -1; }
+
+@media (max-width: 1180px) {
+  .vulns-charts { grid-template-columns: minmax(0, 1fr); }
+  .factor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .factor-grid { grid-template-columns: minmax(0, 1fr); }
+  .pick.row-pick { grid-template-columns: 18px 64px 64px 1fr; }
+  .pick.row-pick > :nth-child(5), .pick.row-pick > :nth-child(6) { display: none; }
+  .prio-body { padding: 4px 0 0; }
+  .vf-cell { max-width: 260px; min-width: 180px; }
+}
+
+/* Finding detail */
+.fd-kpis .metric { min-height: 140px; }
+.fd-kpis .metric .m-value { font-size: 1.6rem; }
+.fd-title-code { color: var(--accent-strong); font-family: var(--font-mono); font-size: 0.72em; margin-right: 8px; vertical-align: middle; }

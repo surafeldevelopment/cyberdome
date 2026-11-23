@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<!-- SYNTHETIC DEMO DATA: hand-written in genuine Nmap XML structure for the CyberDome demo engagement. Hosts use RFC 5737 documentation addresses (192.0.2.0/24). This is NOT real scan output and NOT assessment evidence. Initial service scan. -->
+<!-- Nmap 7.94SVN scan initiated Mon Oct 12 14:05:00 2026 as: nmap -sV -O -oX scan-nmap-demo.xml 192.0.2.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sV -O -oX scan-nmap-demo.xml 192.0.2.0/24" start="1791813900" startstr="Mon Oct 12 14:05:00 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1-1000"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1791813905" endtime="1791814020"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.0.2.10" addrtype="ipv4"/>
+<hostnames>
+<hostname name="web01.cyberdome.example" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="997"><extrareasons reason="no-response" count="997" proto="tcp" ports=""/></extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.5" extrainfo="Ubuntu Linux; protocol 2.0" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 4.15 - 5.19" accuracy="95" line="1"><osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"/></osmatch>
+</os>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<host starttime="1791813905" endtime="1791814080"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.0.2.20" addrtype="ipv4"/>
+<hostnames>
+<hostname name="files01.cyberdome.example" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="996"><extrareasons reason="no-response" count="996" proto="tcp" ports=""/></extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="msrpc" product="Microsoft Windows RPC" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ms-wbt-server" product="Microsoft Terminal Services" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Microsoft Windows Server 2019" accuracy="92" line="1"><osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2019" accuracy="92"/></osmatch>
+</os>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<host starttime="1791813905" endtime="1791814050"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.0.2.30" addrtype="ipv4"/>
+<hostnames>
+<hostname name="db01.cyberdome.example" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="998"><extrareasons reason="no-response" count="998" proto="tcp" ports=""/></extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.7" extrainfo="Ubuntu Linux; protocol 2.0" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MySQL" version="5.7.33" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 4.15 - 5.19" accuracy="95" line="1"><osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"/></osmatch>
+</os>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<host starttime="1791813905" endtime="1791814060"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.0.2.40" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ftp01.cyberdome.example" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="998"><extrareasons reason="no-response" count="998" proto="tcp" ports=""/></extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="telnet" product="Linux telnetd" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 4.15 - 5.19" accuracy="95" line="1"><osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"/></osmatch>
+</os>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<host starttime="1791813905" endtime="1791814290"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.0.2.50" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ws01.cyberdome.example" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="1000"><extrareasons reason="no-response" count="1000" proto="tcp" ports=""/></extraports>
+
+</ports>
+<times srtt="512" rttvar="140" to="100000"/>
+</host>
+<runstats><finished time="1791814300" timestr="Mon Oct 12 14:11:40 2026" summary="Nmap done at Mon Oct 12 14:11:40 2026; 5 IP addresses (5 hosts up) scanned in 400.00 seconds" elapsed="400.00" exit="success"/><hosts up="5" down="0" total="5"/>
+</runstats>
+</nmaprun>

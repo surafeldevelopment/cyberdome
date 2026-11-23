@@ -1,0 +1,7 @@
+{
+  "_comment": "SYNTHETIC TEST FIXTURE - not real assessment results",
+  "findings": [
+    { "title": "SYNTHETIC - Telnet service enabled", "severity": "high", "host_ip": "192.0.2.40", "port": 23, "protocol": "tcp", "cves": [], "description": "SYNTHETIC. Telnet answers on 23/tcp.", "impact": "Cleartext credentials.", "remediation": "Disable telnet.", "scanner": "InstructorSheet", "plugin_id": "IS-10" },
+    { "title": "SYNTHETIC - Anonymous FTP allowed", "severity": "medium", "host_ip": "ftp01.cyberdome.example", "port": 21, "cves": "", "remediation": "Disable anonymous login.", "scanner": "InstructorSheet", "plugin_id": "IS-11", "extra_field": 1 }
+  ]
+}

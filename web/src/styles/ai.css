@@ -1,0 +1,86 @@
+/* AI Security Analyst — reference card language on top of the shared theme. */
+.ai-page { display: flex; flex-direction: column; }
+.ai-page > .page-header { margin-bottom: 20px; }
+.ai-row { margin-bottom: 18px; }
+.ai-steps { margin: 0; padding-left: 1.3em; font-size: 0.9rem; color: var(--text-2); }
+.ai-steps li { margin: 4px 0; }
+
+.ai-disconnected {
+  margin-bottom: 18px; border-color: var(--line-strong);
+  background: var(--kpi-grad); box-shadow: var(--hl), var(--shadow-sm);
+}
+.ai-plug { width: 36px; height: 36px; border-radius: 50%; display: inline-grid; place-items: center; border: 1px solid var(--line-strong); background: var(--bg-sunken); color: #f3d48c; }
+
+/* "Powered by …" pill, as in the reference panel header */
+.ai-powered {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; white-space: nowrap;
+  border: 1px solid var(--line-strong); background: var(--bg-sunken); color: var(--text); max-width: 100%; overflow: hidden; text-overflow: ellipsis;
+}
+.ai-powered svg { color: var(--accent-strong); flex: none; }
+.ai-powered.off { color: var(--text-2); }
+.ai-powered.off svg { color: var(--text-3); }
+.ai-new .stack { gap: 16px; }
+.ai-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 4px; }
+.ai-sel { margin-right: auto; color: var(--text-2); font-size: 0.9rem; }
+.ai-sel strong { color: var(--text); font-weight: 600; font-size: 1.05rem; margin-right: 2px; }
+
+.ai-filters { gap: 8px; }
+.ai-search { flex: 0 1 260px; }
+.ai-search input[type='search'] { min-height: 34px; padding-right: 14px; }
+.ai-evtable { max-height: 470px; overflow-y: auto; border-top: 1px solid var(--line); }
+.ai-evtable table.data td { padding-top: 11px; padding-bottom: 11px; }
+.ai-evtable tr.blocked td { opacity: 0.62; cursor: not-allowed; }
+.ai-evtable .cell-asset .t strong { max-width: 38ch; }
+.ai-page .cell-asset .t > span span, .ai-detail .cell-asset .t > span span { display: inline; }
+.ai-evtable .cell-asset .ic { width: 34px; height: 34px; }
+.ai-reason { color: var(--warn); }
+
+.ai-guard { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.ai-guard-row { border-radius: var(--r-md); grid-template-columns: 34px minmax(0, 1fr); align-items: start; padding: 11px 14px; }
+.ai-guard-row .n { width: 34px; height: 34px; font-size: 0.92rem; }
+.ai-guard-row .t strong { white-space: normal; font-size: 0.92rem; }
+.ai-guard-row .t span { white-space: normal; line-height: 1.4; margin-top: 2px; }
+
+.ai-history-panel .cell-asset .t strong { max-width: 42ch; }
+
+/* Session detail */
+.ai-draft-banner {
+  display: flex; gap: 14px; align-items: flex-start; padding: 14px 18px; border-radius: var(--r-lg); margin-bottom: 18px;
+  border: 1px solid #4a3a17; color: #f1dfb8;
+  background: #17130a; box-shadow: var(--hl);
+}
+.ai-draft-banner .ai-plug { color: var(--warn); flex: none; }
+.ai-draft-banner strong { font-size: 1.12rem; font-weight: 600; letter-spacing: 0.01em; }
+.ai-detail > .notice { margin-bottom: 18px; }
+.ai-response { border: 1px solid #1f4a44; border-radius: var(--r-md); background: var(--bg-sunken); padding: 14px 18px; }
+.ai-response.verified { border-color: var(--accent-line); }
+.cite-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cite-box { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--bg-sunken); padding: 12px 14px; }
+.cite-box .cb-head { display: flex; align-items: center; gap: 8px; font-size: 0.86rem; color: var(--text-2); }
+.cite-box .cb-head strong { margin-left: auto; color: var(--text); font-size: 1.05rem; font-weight: 500; }
+.cite-box .chips { margin-top: 8px; }
+.ai-attack .cell-asset .t strong { max-width: 36ch; }
+.ai-review-history li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; }
+
+@media (max-width: 860px) {
+  .cite-grid { grid-template-columns: 1fr; }
+  .ai-search { flex: 1 1 100%; }
+  .ai-sel { flex-basis: 100%; }
+}
+
+.ai-detail .btn-group { display: flex; flex-wrap: wrap; row-gap: 6px; }
+.ai-detail .btn-group .btn { flex: 1 1 auto; }
+.ai-detail .kv { grid-template-columns: minmax(96px, 120px) minmax(0, 1fr); }
+
+/* Ask a question (general, no evidence) */
+.ai-ask { margin-bottom: 18px; }
+.ask-box { display: flex; gap: 10px; align-items: flex-end; }
+.ask-box textarea { flex: 1; resize: vertical; min-height: 54px; }
+.ask-examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.chip-btn { all: unset; cursor: pointer; font-size: 0.82rem; color: var(--text-2); padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel-2); }
+.chip-btn:hover { color: var(--text); border-color: var(--line-strong); }
+.chip-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ask-answer { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.ask-q { font-weight: 500; margin-bottom: 8px; color: var(--text); }
+.ask-meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+@media (max-width: 640px) { .ask-box { flex-direction: column; align-items: stretch; } }
